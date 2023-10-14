@@ -1,0 +1,29 @@
+Sub WriteSeriesToCells()
+
+
+    Dim i As Integer
+    Dim currentRow As Integer
+    
+    Range("A1") = "Sr. No"
+    Range("B1") = "Emp_Name"
+    Range("C1") = "Emp_Age"
+    Range("D1") = "Emp_City"
+    Range("E1") = "Emp_Salary"
+    
+    
+    
+    'Range("A1:D1") = "Sr. No"
+' Start writing from cell A2
+    currentRow = 2
+    
+' Loop from 1 to 10
+    For i = 1 To 10
+' Write the value to cell A2 and increment the row
+    Cells(currentRow, 1).Value = i
+    currentRow = currentRow + 1
+    Cells.EntireColumn.AutoFit
+
+    
+    Next i
+    
+    End Sub
