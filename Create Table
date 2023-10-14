@@ -1,6 +1,6 @@
 Sub WriteSeriesToCells()
 
-
+'For create Table'
     Dim i As Integer
     Dim currentRow As Integer
     
@@ -9,7 +9,9 @@ Sub WriteSeriesToCells()
     Range("C1") = "Emp_Age"
     Range("D1") = "Emp_City"
     Range("E1") = "Emp_Salary"
-    
+    Range("F1") = "Joining_Date"
+    Range("G1") = "Retirement_Dt"
+    Range("H1") = "Department"
     
     
     'Range("A1:D1") = "Sr. No"
@@ -22,8 +24,13 @@ Sub WriteSeriesToCells()
     Cells(currentRow, 1).Value = i
     currentRow = currentRow + 1
     Cells.EntireColumn.AutoFit
-
+    
+    Range("A1:H1").Font.Bold = True
+    columns("A:A").Font.Bold = True
+    Range("B2").Select
+    
     
     Next i
     
     End Sub
+    
